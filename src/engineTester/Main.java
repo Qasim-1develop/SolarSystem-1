@@ -70,7 +70,7 @@ public class Main {
 
         MasterRenderer renderer = new MasterRenderer(loader);
 
-        Player player = new Player(staticModel, new Vector3f(195, 0, -220), 0, 0, 0, 1);
+        Player player = new Player(staticModel, new Vector3f(195, 5, -409), 0, 0, 0, 1);
         Camera camera = new Camera(player);
 
         List<GuiTexture> guis = new ArrayList<GuiTexture>();
@@ -107,16 +107,18 @@ public class Main {
             //renderer.renderScene(entities,terrain, lights, camera);
             GL11.glEnable(GL30.GL_CLIP_DISTANCE0);
 
+            // render reflection texture
             buffers.bindReflectionFrameBuffer();
             float distance = 2 * (camera.getPosition().y - water.getHeight());
             camera.getPosition().y -= distance;
             camera.invertPitch();
             renderer.processEntity(player);
             renderer.processTerrain(terrain);
-            renderer.render(lights, camera, new Vector4f(0, 1, 0, water.getHeight()));
+            renderer.render(lights, camera, new Vector4f(0, 1, 0, water.getHeight())); // be careful with +1f offset. Might cause incorrect reflections. Disabled for now
             camera.getPosition().y += distance;
             camera.invertPitch();
 
+            // render refraction texture
             buffers.bindRefractionFrameBuffer();
             renderer.processEntity(player);
             renderer.processTerrain(terrain);
@@ -128,7 +130,7 @@ public class Main {
             renderer.processEntity(player);
             renderer.processTerrain(terrain);
             renderer.render(lights, camera, new Vector4f(0, -1, 0, 15));
-            waterRenderer.render(waters, camera);
+            waterRenderer.render(waters, camera, light);
             guiRenderer.render(guis);
             DisplayManager.updateDisplay();
         }
