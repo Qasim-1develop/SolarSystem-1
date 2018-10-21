@@ -47,6 +47,11 @@ public class Entity {
         this.position.z += dz;
     }
 
+    public void decreasePosition(float dx, float dy, float dz){
+        this.position.x -= dx;
+        this.position.y -= dy;
+        this.position.z -= dz;
+    }
     public void increaseRotation(float dx, float dy, float dz){
         this.rotX += dx;
         this.rotY += dy;
