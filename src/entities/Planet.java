@@ -17,5 +17,4 @@ public class Planet extends Entity {
         float dz = (float) (distance * Math.cos(Math.toRadians(super.getRotY())));
         super.increasePosition(dx, 0, dz);
     }
-
 }
