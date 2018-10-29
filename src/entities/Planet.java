@@ -11,8 +11,8 @@ public class Planet extends Entity {
     }
 
     public void orbit(float currentSpeed, float currentTurnSpeed){
-        super.increaseRotation(0, currentTurnSpeed * DisplayManager.getFrameTimeSeconds(), 0);
-        float distance = currentSpeed * DisplayManager.getFrameTimeSeconds();
+        super.increaseRotation(0, currentTurnSpeed * 0.01f, 0);
+        float distance = currentSpeed * 0.01f;
         float dx = (float) (distance * Math.sin(Math.toRadians(super.getRotY())));
         float dz = (float) (distance * Math.cos(Math.toRadians(super.getRotY())));
         super.increasePosition(dx, 0, dz);

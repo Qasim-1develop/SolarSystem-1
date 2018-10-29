@@ -71,12 +71,12 @@ public class Main {
 
         //Entity entity = new Entity(staticModel, new Vector3f(0, 0, -5), 0, 45, 0, 1);
         Planet pluto = new Planet(plutoModel, new Vector3f(340, 5, -560), 0, 0, 0, 0.5f);
-        Planet neptune = new Planet(neptuneModel, new Vector3f(325, 5, -545), 0, 0, 0, 0.5f);
-        Planet uranus = new Planet(uranusModel, new Vector3f(310, 5, -530), 0, 0, 0, 0.5f);
-        Planet moon2 = new Planet(moonModel, new Vector3f(255, 5, -475), 0, 0, 0, 0.2f);
-        Planet saturnRing = new Planet(saturnRingModel, new Vector3f(235, 5, -455), 0, 0, 0, 1f);
+        Planet neptune = new Planet(neptuneModel, new Vector3f(325, 5, -545), 0, 0, 0, 0.7f);
+        Planet uranus = new Planet(uranusModel, new Vector3f(310, 5, -530), 0, 0, 0, 0.7f);
+        Planet moon2 = new Planet(moonModel, new Vector3f(190, 5, -452.5f), 0, 0, 0, 0.2f);
+        Planet saturnRing = new Planet(saturnRingModel, new Vector3f(235, 3, -455), 0, 0, 0, 1f);
         Planet saturn = new Planet(saturnModel, new Vector3f(235, 5, -455), 0, 0, 0, 1f);
-        Planet moon = new Planet(moonModel, new Vector3f(215, 5, -435), 0, 0, 0, 0.2f);
+        Planet moon = new Planet(moonModel, new Vector3f(205, 5, -452.5f), 0, 0, 0, 0.2f);
         Planet jupiter = new Planet(jupiterModel, new Vector3f(160, 5, -380), 0, 5, 0, 1.5f);
         Planet mars = new Planet(marsModel, new Vector3f(142, 5, -362), 0, 5, 0, 0.7f);
         Planet earth = new Planet(earthModel, new Vector3f(130, 5, -350), 0, 0, 0, 0.8f);
@@ -156,10 +156,10 @@ public class Main {
             pluto.orbit(0, 10);
             neptune.orbit(0, 10);
             uranus.orbit(0, 10);
-            //moon2.orbit(-15, -30);
+            moon2.orbit(-20.005f, -20.5f);
             saturnRing.orbit(0, 10);
             saturn.orbit(0, 10);
-            //moon.orbit(20.005f, 41);
+            moon.orbit(20.005f, 32.5f);
             jupiter.orbit(0, 10);
             mars.orbit(0, 10);
             earth.orbit(0, 10);
