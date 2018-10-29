@@ -156,7 +156,7 @@ public class Main {
             pluto.orbit(0, 10);
             neptune.orbit(0, 10);
             uranus.orbit(0, 10);
-            moon2.orbit(-20.005f, -20.5f);
+            moon2.orbit(20.005f, 20.5f);
             saturnRing.orbit(0, 10);
             saturn.orbit(0, 10);
             moon.orbit(20.005f, 32.5f);
