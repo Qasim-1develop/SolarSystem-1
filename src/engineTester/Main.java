@@ -82,7 +82,7 @@ public class Main {
         Planet earth = new Planet(earthModel, new Vector3f(130, 5, -350), 0, 0, 0, 0.8f);
         Planet venus = new Planet(venusModel, new Vector3f(115, 5, -335), 0, 5, 0, 0.5f);
         Planet mercury = new Planet(mercuryModel, new Vector3f(100, 5, -320), 0, 5, 0, 0.5f);
-        Planet sun = new Planet(sunModel, new Vector3f(5, 5, -225), 0, 5, 0, 10f);
+        Planet sun = new Planet(sunModel, new Vector3f(5, 5, -225), 40, 230, 0, 10f);
 
 //        List<Planet> planets = new ArrayList<Planet>();
 //        planets.add(saturn);
@@ -117,6 +117,7 @@ public class Main {
 
         Light sunlight = new Light(new Vector3f(10, 15, -10), new Vector3f(1.3f, 1.3f, 1.3f));
         List<Light> lights = new ArrayList<Light>();
+        //lights.add(sunlight);
 //        lights.add(new Light(new Vector3f(0, 1000, -7000), new Vector3f(0.4f, 0.4f, 0.4f)));
 //        lights.add(new Light(new Vector3f(200, 10, -190), new Vector3f(10, 0, 0), new Vector3f(1, 0.01f, 0.002f)));
 //        lights.add(new Light(new Vector3f(210, 14, -210), new Vector3f(0, 0, 10), new Vector3f(1, 0.01f, 0.002f)));
@@ -126,7 +127,7 @@ public class Main {
         //terrains.add(terrain);
         //Terrain terrain2 = new Terrain(-1, -1, loader, texturePack, blendMap, "heightmap");
 
-        Player player = new Player(staticModel, new Vector3f(230, 5, -450), 0, 0, 0, 1);
+        Player player = new Player(staticModel, new Vector3f(235, 5, -455), 0, 0, 0, 1);
         //entities.add(player);
         Camera camera = new Camera(player);
 
