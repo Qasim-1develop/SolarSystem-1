@@ -77,7 +77,7 @@ public class Main {
         Planet saturnRing = new Planet(saturnRingModel, new Vector3f(235, 3, -455), 0, 0, 0, 1f);
         Planet saturn = new Planet(saturnModel, new Vector3f(235, 5, -455), 0, 0, 0, 1f);
         Planet moon = new Planet(moonModel, new Vector3f(205, 5, -452.5f), 0, 0, 0, 0.2f);
-        Planet jupiter = new Planet(jupiterModel, new Vector3f(160, 5, -380), 0, 5, 0, 1.5f);
+        Planet jupiter = new Planet(jupiterModel, new Vector3f(160, 5, -380), 0, 0, 0, 1.5f);
         Planet mars = new Planet(marsModel, new Vector3f(142, 5, -362), 0, 5, 0, 0.7f);
         Planet earth = new Planet(earthModel, new Vector3f(130, 5, -350), 0, 0, 0, 0.8f);
         Planet venus = new Planet(venusModel, new Vector3f(115, 5, -335), 0, 5, 0, 0.5f);

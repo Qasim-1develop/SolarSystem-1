@@ -10,7 +10,7 @@ public class Player extends Entity {
 
     private static final float RUN_SPEED = 20;
     private static final float  TURN_SPEED = 160;
-    private static final float GRAVITY = -50;
+    private static final float GRAVITY = 0;
     private static final float JUMP_POWER = 30;
 
     private static final float TERRAIN_HEIGHT = 0;
@@ -23,6 +23,11 @@ public class Player extends Entity {
 
     public Player(TexturedModel model, Vector3f position, float rotX, float rotY, float rotZ, float scale) {
         super(model, position, rotX, rotY, rotZ, scale);
+    }
+
+    @Override
+    public void setPosition(Vector3f position) {
+        super.setPosition(position);
     }
 
     public void move(Terrain terrain){
@@ -50,28 +55,61 @@ public class Player extends Entity {
     }
 
     public void checkInputs(){
-        if(Keyboard.isKeyDown(Keyboard.KEY_W)){
-            this.currentSpeed = RUN_SPEED;
+//        if(Keyboard.isKeyDown(Keyboard.KEY_W)){
+//            this.currentSpeed = RUN_SPEED;
+//        }
+//        else if(Keyboard.isKeyDown(Keyboard.KEY_S)){
+//            this.currentSpeed = -RUN_SPEED;
+//        }
+//        else {
+//            this.currentSpeed = 0;
+//        }
+//
+//        if (Keyboard.isKeyDown(Keyboard.KEY_D)){
+//            this.currentTurnSpeed = -TURN_SPEED;
+//        }
+//        else if(Keyboard.isKeyDown(Keyboard.KEY_A)){
+//            this.currentTurnSpeed = TURN_SPEED;
+//        }
+//        else {
+//            this.currentTurnSpeed = 0;
+//        }
+//
+//        if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
+//            jump();
+//        }
+        //sun
+        if(Keyboard.isKeyDown(Keyboard.KEY_S)){
+            setPosition(new Vector3f(5, 0, -225));
         }
-        else if(Keyboard.isKeyDown(Keyboard.KEY_S)){
-            this.currentSpeed = -RUN_SPEED;
+        //mercury
+        if(Keyboard.isKeyDown(Keyboard.KEY_1)){
+            setPosition(new Vector3f(100, 0, -320));
         }
-        else {
-            this.currentSpeed = 0;
+        //venus
+        if(Keyboard.isKeyDown(Keyboard.KEY_2)){
+            setPosition(new Vector3f(115, 0, -335));
         }
-
-        if (Keyboard.isKeyDown(Keyboard.KEY_D)){
-            this.currentTurnSpeed = -TURN_SPEED;
+        if(Keyboard.isKeyDown(Keyboard.KEY_3)){
+            setPosition(new Vector3f(130, 0, -350));
         }
-        else if(Keyboard.isKeyDown(Keyboard.KEY_A)){
-            this.currentTurnSpeed = TURN_SPEED;
+        if(Keyboard.isKeyDown(Keyboard.KEY_4)){
+            setPosition(new Vector3f(142, 0, -362));
         }
-        else {
-            this.currentTurnSpeed = 0;
+        if(Keyboard.isKeyDown(Keyboard.KEY_5)){
+            setPosition(new Vector3f(160, 0, -380));
         }
-
-        if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
-            jump();
+        if(Keyboard.isKeyDown(Keyboard.KEY_6)){
+            setPosition(new Vector3f(235, 0, -455));
+        }
+        if(Keyboard.isKeyDown(Keyboard.KEY_7)){
+            setPosition(new Vector3f(310, 0, -530));
+        }
+        if(Keyboard.isKeyDown(Keyboard.KEY_8)){
+            setPosition(new Vector3f(325, 0, -545));
+        }
+        if(Keyboard.isKeyDown(Keyboard.KEY_9)){
+            setPosition(new Vector3f(340, 0, -560));
         }
     }
 }
